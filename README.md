@@ -1,49 +1,47 @@
-OVERVIEW This script automates the process of updating the "Visible to Guest" status for items in your inventory. It reads from a source file and applies visibility rules based on the "Sub-category" of each item.
+# Inventory Visibility Automator
 
-NOTE: Only works in IDLE
+This script automates the process of updating the **"Visible to Guest"** status for inventory items. It reads from a source file and applies visibility rules based on the **"Sub-category"** of each item.
 
-FILE REQUIREMENTS
+> **Note:** This script is designed to run in **IDLE**.
 
-Input File: Must be named "parts.csv"
+---
 
-Location: The CSV file must be in the same folder as the script.
+## 🛠 File Requirements
 
-Columns: The CSV must contain columns named "Sub-category" and "Visible to Guest".
+* **Filename:** Must be named `parts.csv`.
+* **Location:** The CSV file must be in the same folder as the script.
+* **Columns:** The CSV must contain columns named `Sub-category` and `Visible to Guest`.
 
-HOW TO USE
+---
 
-Ensure your data file is named "parts.csv" and is in the script folder.
+## 🚀 How To Use
 
-Run the script using IDLE.
+1.  Ensure your data file is named `parts.csv` and is in the script folder.
+2.  Run the script using **IDLE**.
+3.  The script will check for the file and process the updates.
+4.  A new file named `updated_parts_list.csv` will be generated. 
 
-The script will check for the file and process the updates.
+*Note: The original `parts.csv` file will remain unchanged.*
 
-A new file named "updated_parts_list.csv" will be generated. Note: The original "parts.csv" file will remain unchanged.
+---
 
-LOGIC RULES The following items will be updated automatically:
+## ⚖️ Logic Rules
 
-Set to 'Y' (Visible):
+The script automatically applies the following updates based on the **Sub-category**:
 
-Electronics
+### **Set to 'Y' (Visible)**
+* Electronics
+* Fans
+* Appearance And Maintenance
+* Venting
 
-Fans
+### **Set to 'N' (Hidden)**
+* Burner Parts
+* Conversion Kits
+* Orifices
+* Pilot Assemblies
+* Thermocouple And Thermopiles
+* Valves
 
-Appearance And Maintenance
-
-Venting
-
-Set to 'N' (Hidden):
-
-Burner Parts
-
-Conversion Kits
-
-Orifices
-
-Pilot Assemblies
-
-Thermocouple And Thermopiles
-
-Valves
-
-Any Sub-category not listed above will keep its original value.
+> [!TIP]
+> Any Sub-category not listed above will keep its original value.
